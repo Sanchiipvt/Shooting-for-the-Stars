@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shooting for the Stars | Constellation Identifier</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="hero">
+    <div class="starfield-bg">
+      <div class="twinkling"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="glow-text">Shooting for the Stars</h1>
+      <p class="tagline">Upload the sky. Discover the stars.</p>
+      <div class="upload-container pulse-glow">
+        <div class="upload-box">
+          <div class="drop-zone" id="dropZone">
+            <div class="upload-icon">🌌</div>
+            <p>Drag & drop your night sky photo</p>
+            <span>or</span>
+            <button class="browse-btn">Browse Files</button>
+            <input type="file" accept="image/*" id="skyUpload">
+          </div>
+          <div class="glow-effect"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="cosmic-bg">
+    <div class="results-container" id="resultsContainer" style="display: none;">
+      <div class="canvas-wrapper">
+        <canvas id="starCanvas"></canvas>
+        <div class="constellation-overlay" id="constellationOverlay"></div>
+      </div>
+      
+      <aside class="info-panel floating-card" id="infoPanel">
+        <h3>Detected Constellations</h3>
+        <div class="constellation-list" id="constellationList">
+          <!-- Dynamically populated -->
+        </div>
+      </aside>
+    </div>
+    
+    <button class="retry-btn cosmic-button" id="retryBtn" style="display: none;">
+      <span class="icon">🔄</span>
+      Try Another Image
+    </button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
